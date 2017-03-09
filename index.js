@@ -2,7 +2,7 @@
 this.App || (this.App = {});
 App.cable = ActionCable.createConsumer('ws://api.clubloot.com/cable')
 
-App.announcement = cable.subscriptions.create('AnnouncementChannel', {
+App.announcement = App.cable.subscriptions.create('AnnouncementChannel', {
   connected: function() {},
   disconnected: function() {},
   received: function(data) {
